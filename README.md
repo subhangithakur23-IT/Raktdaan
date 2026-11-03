@@ -37,4 +37,3 @@ For an urgent medical need, contact the treating hospital, a licensed blood bank
 - Vanilla JavaScript
 - Browser localStorage
 
-Made as a student hackathon prototype.
