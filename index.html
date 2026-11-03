@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#b5122b" />
+  <title>Raktdaan Connect | Every Drop Connects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="announcement"><span class="pulse"></span> A little effort. A life-changing connection. <strong>Be someone's type.</strong></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Raktdaan Connect home">
+      <span class="brand-mark">✚</span><span>raktdaan<span class="brand-light">connect</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+    <nav id="mainNav">
+      <a href="#how">How it works</a>
+      <a href="#requests">Find blood</a>
+      <a href="#donor">Become a donor</a>
+      <a class="nav-cta" href="#request">Request blood <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span>●</span> PEOPLE POWERED. PURPOSE DRIVEN.</div>
+        <h1>The right match.<br><em>Right when it matters.</em></h1>
+        <p class="hero-text">A simple way to connect people who need blood with registered donors and blood banks nearby. Less searching. Better coordination. More hope.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#request">I need blood <span>→</span></a>
+          <a class="button button-secondary" href="#donor">I want to donate <span>♡</span></a>
+        </div>
+        <div class="hero-note"><span class="tiny-heart">♥</span> One community. Many ways to help.</div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a blood drop and helping hands">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="float-card float-top"><span class="float-icon">🩸</span><span><b>Every group matters</b><small>A+ · B− · O+ · AB+ and more</small></span></div>
+        <div class="drop-wrap"><div class="big-drop">♥</div><span class="drop-spark spark-a">✦</span><span class="drop-spark spark-b">✧</span></div>
+        <div class="float-card float-bottom"><span class="online-dot"></span><span><b>Stronger together</b><small>Donors + hospitals + blood banks</small></span></div>
+        <span class="art-caption">A connection can make a difference.</span>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div><b>01</b><span>Register</span></div><i>→</i><div><b>02</b><span>Find a match</span></div><i>→</i><div><b>03</b><span>Connect</span></div><i>→</i><div><b>04</b><span>Update status</span></div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="section-heading"><div><div class="eyebrow">NO COMPLICATED DETOURS</div><h2>Good people.<br><em>One connected platform.</em></h2></div><p>Raktdaan Connect helps organize the first step: finding the right people and verified services to contact.</p></div>
+      <div class="steps-grid">
+        <article class="step-card"><span class="step-number">01</span><div class="step-icon pink">📝</div><h3>Share a request</h3><p>Enter the blood group, units needed, city and hospital details.</p></article>
+        <article class="step-card"><span class="step-number">02</span><div class="step-icon orange">🔎</div><h3>Find relevant contacts</h3><p>Browse demo listings by blood group and location.</p></article>
+        <article class="step-card"><span class="step-number">03</span><div class="step-icon purple">🤝</div><h3>Coordinate directly</h3><p>Use the contact details provided to confirm availability.</p></article>
+        <article class="step-card"><span class="step-number">04</span><div class="step-icon green">📊</div><h3>Keep it updated</h3><p>Update request status so the community sees the latest information.</p></article>
+      </div>
+    </section>
+
+    <section class="request-section" id="request">
+      <div class="section-heading compact"><div><div class="eyebrow">NEED HELP FINDING A MATCH?</div><h2>Post a blood <em>request.</em></h2></div><span class="demo-label">DEMO APP</span></div>
+      <div class="form-layout">
+        <form class="panel request-form" id="requestForm">
+          <div class="panel-title"><span class="panel-icon">🩸</span><div><h3>Request details</h3><p>Fields marked * are required.</p></div></div>
+          <div class="form-grid">
+            <label>Patient / contact name *<input name="name" required maxlength="60" placeholder="Name of contact person"></label>
+            <label>Blood group *<select name="group" required><option value="">Select group</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select></label>
+            <label>Units required *<select name="units" required><option value="">Select units</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select></label>
+            <label>City *<input name="city" required maxlength="50" placeholder="e.g. Delhi"></label>
+            <label class="full">Hospital / blood bank name *<input name="hospital" required maxlength="100" placeholder="Enter facility name"></label>
+            <label>Contact number *<input name="phone" type="tel" required pattern="[0-9+\-\s]{8,16}" placeholder="Phone number"></label>
+            <label>When is it needed?<select name="urgency"><option>As soon as possible</option><option>Within 24 hours</option><option>Within 2–3 days</option></select></label>
+          </div>
+          <label class="consent"><input type="checkbox" required> I confirm I have permission to share these contact details for this demo request.</label>
+          <button class="button button-primary submit-button" type="submit">Submit request <span>→</span></button>
+          <p class="form-message" id="requestMessage" role="status"></p>
+        </form>
+        <aside class="side-note"><div class="side-emoji">📌</div><h3>Quick but important note</h3><p>This student prototype does not confirm real-time blood stock or donor eligibility. Always verify availability with a licensed blood bank or hospital.</p><div class="side-divider"></div><b>For an urgent medical need</b><p>Contact the treating hospital, a licensed blood bank or local emergency services immediately. Do not wait for an app response.</p></aside>
+      </div>
+    </section>
+
+    <section class="section" id="requests">
+      <div class="section-heading"><div><div class="eyebrow">COMMUNITY REQUEST BOARD</div><h2>Find a request.<br><em>Make a connection.</em></h2></div><p>Filter the sample requests below. New requests submitted in this browser will appear here.</p></div>
+      <div class="filters">
+        <label>Blood group<select id="filterGroup"><option value="">All groups</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select></label>
+        <label>City<input id="filterCity" placeholder="Search city"></label>
+        <button class="button button-secondary filter-reset" id="resetFilters" type="button">Reset filters</button>
+      </div>
+      <div class="request-grid" id="requestList" aria-live="polite"></div>
+      <p class="empty-state" id="emptyState" hidden>No requests match those filters. Try another blood group or city.</p>
+      <p class="data-note">Sample listings are fictional and shown for demonstration only. They are not live requests or confirmed availability.</p>
+    </section>
+
+    <section class="donor-section" id="donor">
+      <div class="donor-copy"><div class="eyebrow light">YOUR KINDNESS, ORGANIZED</div><h2>Could you be<br>someone's <em>match?</em></h2><p>Register your interest as a voluntary donor. A real donation should always be arranged through a licensed blood bank or hospital, with their eligibility screening and medical guidance.</p><div class="donor-points"><span>✓ Register your interest</span><span>✓ Share your preferred city</span><span>✓ Stay in control of your details</span></div></div>
+      <form class="donor-form" id="donorForm">
+        <div class="panel-title"><span class="panel-icon">❤️</span><div><h3>Donor interest form</h3><p>Join the demo community.</p></div></div>
+        <label>Your name *<input name="name" required maxlength="60" placeholder="Your name"></label>
+        <div class="form-grid">
+          <label>Blood group *<select name="group" required><option value="">Select</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select></label>
+          <label>City *<input name="city" required maxlength="50" placeholder="Your city"></label>
+        </div>
+        <label>Contact number *<input name="phone" type="tel" required pattern="[0-9+\-\s]{8,16}" placeholder="Phone number"></label>
+        <label class="consent"><input type="checkbox" required> I agree to be contacted about this demo registration.</label>
+        <button class="button button-primary submit-button" type="submit">Register interest <span>♡</span></button>
+        <p class="form-message" id="donorMessage" role="status"></p>
+      </form>
+    </section>
+
+    <section class="impact-section">
+      <div class="impact-intro"><div class="eyebrow">SMALL CONNECTIONS. BIGGER IMPACT.</div><h2>Less chaos.<br><em>More coordination.</em></h2><p>Our goal is to make information easier to find and requests easier to coordinate—not to replace hospitals, blood banks or medical professionals.</p></div>
+      <div class="impact-stats"><div><strong>01</strong><span>Centralized request information</span></div><div><strong>02</strong><span>Location-aware discovery (future scope)</span></div><div><strong>03</strong><span>Clearer request status updates</span></div></div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#home"><span class="brand-mark">✚</span><span>raktdaan<span class="brand-light">connect</span></span></a>
+    <p>Connecting people with purpose. <span>Made with ♥ for the community.</span></p>
+    <div class="footer-bottom"><span>© 2026 Raktdaan Connect · Student prototype</span><a href="#home">Back to top ↑</a></div>
+    <div class="meme"><span>ME: I HAVE ONE TYPE.</span><b>ALSO ME: A+, B−, O+, AB−…</b><small>When the assignment said “build connections” 🩸</small></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
