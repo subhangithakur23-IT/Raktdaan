@@ -29,13 +29,6 @@ Do not enter real patient or donor personal information into this demo. The samp
 
 For an urgent medical need, contact the treating hospital, a licensed blood bank, or local emergency services immediately. Blood donation and eligibility screening should be handled by qualified professionals at licensed facilities.
 
-## Suggested next steps
-
-1. Build a backend (for example, Node.js + Express or Firebase).
-2. Add authentication and role-based access for donors, hospitals, and blood banks.
-3. Add a verified blood-bank directory and an approval workflow.
-4. Add privacy protections and secure storage before collecting any real personal data.
-5. Integrate maps and notifications only after the backend and verification workflow are ready.
 
 ## Tech used
 
